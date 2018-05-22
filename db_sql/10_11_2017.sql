@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
 --
--- Host: localhost    Database: gmaps_db
+-- Host: localhost    Database: gmaps_api_db
 -- ------------------------------------------------------
--- Server version	5.7.22-0ubuntu0.16.04.1
+-- Server version	5.7.20-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,7 +29,7 @@ CREATE TABLE `markers` (
   `lat` float(10,6) NOT NULL,
   `lng` float(10,6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `markers` (
 
 LOCK TABLES `markers` WRITE;
 /*!40000 ALTER TABLE `markers` DISABLE KEYS */;
-INSERT INTO `markers` VALUES (9,'Convento Sagrado Coração de Jesus',' R. Frei Caneca - Centro Igarassu - PE 53610-040 Brazil',-7.834372,-34.906487),(7,'IFPE',' Rod. Gov. Mário Covas, S/n - Centro Igarassu - PE 53630-220 Brazil',-7.855719,-34.909561),(8,'Marco Zero',' Av. Alfredo Lisboa, s/n - Recife PE 50030-150 Brazil',-8.063152,-34.871117),(10,'Assalto à mão armada','Alto da Felicidade',-7.747390,-34.826588),(11,'oi','bb',-8.028557,-34.917751);
+INSERT INTO `markers` VALUES (9,'Convento Sagrado Coração de Jesus',' R. Frei Caneca - Centro Igarassu - PE 53610-040 Brazil',-7.834372,-34.906487),(7,'IFPE',' Rod. Gov. Mário Covas, S/n - Centro Igarassu - PE 53630-220 Brazil',-7.855719,-34.909561),(8,'Marco Zero',' Av. Alfredo Lisboa, s/n - Recife PE 50030-150 Brazil',-8.063152,-34.871117);
 /*!40000 ALTER TABLE `markers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-22 11:09:14
+-- Dump completed on 2017-11-10  1:47:44

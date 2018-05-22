@@ -27,23 +27,27 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->script('jquery.min.js'); ?>    
+
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1>Se Liga</h1>
             </li>
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Reportar Incidente</a></li>
+                <li><a target="_blank" href="https://api.cakephp.org/3.0/">Fale Conosco</a></li>
+		<li><a target="_blank" href="https://api.cakephp.org/3.0/">Sobre</a></li>
             </ul>
         </div>
     </nav>
