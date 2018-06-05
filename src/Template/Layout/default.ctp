@@ -40,14 +40,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1>Se Liga</h1>
+                <a target="_blank" href="../"><h1>Se Liga</h1></a>
             </li>
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Reportar Incidente</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">Fale Conosco</a></li>
-		<li><a target="_blank" href="https://api.cakephp.org/3.0/">Sobre</a></li>
+                <li><a target="_blank" href="../markers/add">Reportar Incidente</a></li>
+                <li><a target="_blank" href="#">Acompanhar Mapa</a></li>
+        <li><a target="_blank" href="#">Contato</a></li>
+        <li><a target="_blank" href="#">Login</a></li>
+        <li><a target="_blank" href="#">Cadastrar</a></li>
             </ul>
         </div>
     </nav>
@@ -59,3 +61,5 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </footer>
 </body>
 </html>
+
+  

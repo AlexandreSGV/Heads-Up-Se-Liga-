@@ -238,3 +238,19 @@ hr {
         max-width: 940px;
     }
 }
+.indexh3 {
+	color:black;
+	text-align: center;
+}
+.inicio {
+	padding-top: 15px!important;
+}
+.h3principal{
+	font-weight: bold;
+}
+.ulprincipal {
+	text-align: center;
+}
+.liprincipal{
+	font-size: 1.5em;
+}

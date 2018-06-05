@@ -29,10 +29,27 @@ endif;
 
 $cakeDescription = 'CakePHP: the rapid development PHP framework';
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?= $cakeDescription ?>:
+        <?= $this->fetch('title') ?>
+    </title>
+    <?= $this->Html->meta('icon') ?>
+
+    <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->script('jquery.min.js'); ?>    
+
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
+ <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?= $cakeDescription ?>
@@ -43,92 +60,72 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
-</head>
-<body class="home">
+<script type="text/javascript">
 
-<header class="row">
-    <div class="header-image"><?= $this->Html->image('cake.logo.svg') ?></div>
+    
+        function myMap() {
+            var myCenter = new google.maps.LatLng(-7.92323,-34.92004);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 11};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+
+            map.addListener('click', function(e) {
+                var markerLatLng = e.latLng;
+                document.getElementById("lat").value = e.latLng.lat();
+                document.getElementById("lng").value = e.latLng.lng();
+                var marker = new google.maps.Marker({
+                    position: markerLatLng,
+                    map: map,
+                    title: "Olá"
+                });
+            });
+
+        }
+</script>
+</head>
+<body>
+    <nav class="top-bar expanded" data-topbar role="navigation">
+        <ul class="title-area large-3 medium-4 columns">
+            <li class="name">
+                <h1>Se Liga</h1>
+            </li>
+        </ul>
+        <div class="top-bar-section">
+            <ul class="right">
+                <li><a target="_blank" href="markers/add">Reportar Incidente</a></li>
+                <li><a target="_blank" href="#">Acompanhar Mapa</a></li>
+		<li><a target="_blank" href="#">Contato</a></li>
+		<li><a target="_blank" href="#">Login</a></li>
+		<li><a target="_blank" href="#">Cadastrar</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+
+<header>
     <div class="header-title">
-        <h1>Welcome to CakePHP <?= Configure::version() ?> Red Velvet. Build fast. Grow solid.</h1>
+        <h1>Acompanhe os registros de crimes que estão ocorrendo em Igarassu</h1>
     </div>
 </header>
 
-<div class="row">
-    <div class="columns large-12">
-        <div class="ctp-warning alert text-center">
-            <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.</p>
-        </div>
-        <div id="url-rewriting-warning" class="alert url-rewriting">
-            <ul>
-                <li class="bullet problem">
-                    URL rewriting is not properly configured on your server.<br />
-                    1) <a target="_blank" href="https://book.cakephp.org/3.0/en/installation.html#url-rewriting">Help me configure it</a><br />
-                    2) <a target="_blank" href="https://book.cakephp.org/3.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
-                </li>
-            </ul>
-        </div>
-        <?php Debugger::checkSecurityKeys(); ?>
+<div>
+    <div class="inicio">
+        <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
+
+        <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
+
+        <h4 class="indexh3 h3principal">FUNCIONALIDADES:</h4>
+
+        <ul class="ulprincipal">
+            <li class="liprincipal">Mapa de Calor</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
     </div>
 </div>
 
-<div class="row">
-    <div class="columns large-6">
-        <h4>Environment</h4>
-        <ul>
-        <?php if (version_compare(PHP_VERSION, '5.6.0', '>=')) : ?>
-            <li class="bullet success">Your version of PHP is 5.6.0 or higher (detected <?= PHP_VERSION ?>).</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP is too low. You need PHP 5.6.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</li>
-        <?php endif; ?>
-
-        <?php if (extension_loaded('mbstring')) : ?>
-            <li class="bullet success">Your version of PHP has the mbstring extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the mbstring extension loaded.</li>;
-        <?php endif; ?>
-
-        <?php if (extension_loaded('openssl')) : ?>
-            <li class="bullet success">Your version of PHP has the openssl extension loaded.</li>
-        <?php elseif (extension_loaded('mcrypt')) : ?>
-            <li class="bullet success">Your version of PHP has the mcrypt extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the openssl or mcrypt extension loaded.</li>
-        <?php endif; ?>
-
-        <?php if (extension_loaded('intl')) : ?>
-            <li class="bullet success">Your version of PHP has the intl extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the intl extension loaded.</li>
-        <?php endif; ?>
-        </ul>
-    </div>
-    <div class="columns large-6">
-        <h4>Filesystem</h4>
-        <ul>
-        <?php if (is_writable(TMP)) : ?>
-            <li class="bullet success">Your tmp directory is writable.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your tmp directory is NOT writable.</li>
-        <?php endif; ?>
-
-        <?php if (is_writable(LOGS)) : ?>
-            <li class="bullet success">Your logs directory is writable.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your logs directory is NOT writable.</li>
-        <?php endif; ?>
-
-        <?php $settings = Cache::getConfig('_cake_core_'); ?>
-        <?php if (!empty($settings)) : ?>
-            <li class="bullet success">The <em><?= $settings['className'] ?>Engine</em> is being used for core caching. To change the config edit config/app.php</li>
-        <?php else : ?>
-            <li class="bullet problem">Your cache is NOT working. Please check the settings in config/app.php</li>
-        <?php endif; ?>
-        </ul>
-    </div>
-    <hr />
-</div>
-
-<div class="row">
+<!-- <div class="row">
     <div class="columns large-6">
         <h4>Database</h4>
         <?php
@@ -272,7 +269,9 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             </li>
         </ul>
     </div>
-</div>
+</div> -->
+<div id="map" style="width:100%;height:500px"></div>
 
+<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap'); ?>
 </body>
 </html>

@@ -1,0 +1,17 @@
+#1. dada uma URL gerar uma string com o texto da página
+#2. dada a string, extrair as informações
+	-> Ocorrência
+		Assalto, Roubo, Assassinato, Feminicídio, etc.
+	-> Cidade
+		Igarassu //  Abreu e Lima, Paulista, Itapissuma, Itamaracá, Goiana, Araçoíaba
+	-> Bairro
+		Cruz de Reouças, Saramandaia, Centro, etc.
+
+
+montar uma tabela
+
+
+ID	|	Tipo		|	Cidade	|	Bairro			| GEO	|
+2	Latrocínio		IGR			Cruz
+3 Assassinato		IGR			Saramandaia
+3 Assalto			IGR			Taepi
