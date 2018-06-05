@@ -8,7 +8,7 @@ use App\Controller\AppController;
  *
  * @property \App\Model\Table\UsersTable $Users
  *
- * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ * @method \App\Model\Entity\User[] paginate($object = null, array $settings = [])
  */
 class UsersController extends AppController
 {
@@ -23,6 +23,7 @@ class UsersController extends AppController
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
+        $this->set('_serialize', ['users']);
     }
 
     /**
@@ -35,10 +36,11 @@ class UsersController extends AppController
     public function view($id = null)
     {
         $user = $this->Users->get($id, [
-            'contain' => ['Crimes']
+            'contain' => []
         ]);
 
         $this->set('user', $user);
+        $this->set('_serialize', ['user']);
     }
 
     /**
@@ -59,6 +61,7 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+        $this->set('_serialize', ['user']);
     }
 
     /**
@@ -83,6 +86,7 @@ class UsersController extends AppController
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }
         $this->set(compact('user'));
+        $this->set('_serialize', ['user']);
     }
 
     /**

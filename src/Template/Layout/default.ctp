@@ -46,10 +46,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="../markers/add">Reportar Incidente</a></li>
-                <li><a target="_blank" href="#">Acompanhar Mapa</a></li>
         <li><a target="_blank" href="#">Contato</a></li>
-        <li><a target="_blank" href="#">Login</a></li>
-        <li><a target="_blank" href="#">Cadastrar</a></li>
             </ul>
         </div>
     </nav>

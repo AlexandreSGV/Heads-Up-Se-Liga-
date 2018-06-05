@@ -93,10 +93,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="markers/add">Reportar Incidente</a></li>
-                <li><a target="_blank" href="#">Acompanhar Mapa</a></li>
 		<li><a target="_blank" href="#">Contato</a></li>
-		<li><a target="_blank" href="#">Login</a></li>
-		<li><a target="_blank" href="#">Cadastrar</a></li>
             </ul>
         </div>
     </nav>
@@ -108,22 +105,6 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
     </div>
 </header>
 
-<div>
-    <div class="inicio">
-        <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
-
-        <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
-
-        <h4 class="indexh3 h3principal">FUNCIONALIDADES:</h4>
-
-        <ul class="ulprincipal">
-            <li class="liprincipal">Mapa de Calor</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-    </div>
-</div>
 
 <!-- <div class="row">
     <div class="columns large-6">
@@ -270,8 +251,27 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
         </ul>
     </div>
 </div> -->
-<div id="map" style="width:100%;height:500px"></div>
+<div id="map" style="width:100%;height:700px"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap'); ?>
+
+<div>
+    <div class="inicio">
+        <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
+
+        <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
+
+        <h4 class="indexh3 h3principal">FUNCIONALIDADES:</h4>
+
+        <ul class="ulprincipal">
+            <li class="liprincipal">Mapa de Calor</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+    </div>
+</div>
+
+
 </body>
 </html>

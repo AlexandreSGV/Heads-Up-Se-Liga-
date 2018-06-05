@@ -9,8 +9,6 @@ use Cake\Validation\Validator;
 /**
  * Users Model
  *
- * @property \App\Model\Table\CrimesTable|\Cake\ORM\Association\HasMany $Crimes
- *
  * @method \App\Model\Entity\User get($primaryKey, $options = [])
  * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
@@ -35,10 +33,6 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
-
-        $this->hasMany('Crimes', [
-            'foreignKey' => 'user_id'
-        ]);
     }
 
     /**
@@ -54,37 +48,16 @@ class UsersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('login')
-            ->maxLength('login', 30)
-            ->requirePresence('login', 'create')
-            ->notEmpty('login');
+            ->scalar('username')
+            ->allowEmpty('username');
 
         $validator
             ->scalar('password')
-            ->maxLength('password', 30)
-            ->requirePresence('password', 'create')
-            ->notEmpty('password');
+            ->allowEmpty('password');
 
         $validator
-            ->scalar('cpf')
-            ->maxLength('cpf', 11)
-            ->requirePresence('cpf', 'create')
-            ->notEmpty('cpf');
-
-        $validator
-            ->scalar('fullname')
-            ->maxLength('fullname', 60)
-            ->allowEmpty('fullname');
-
-        $validator
-            ->scalar('date_of_birth')
-            ->maxLength('date_of_birth', 8)
-            ->allowEmpty('date_of_birth');
-
-        $validator
-            ->scalar('telephone_number')
-            ->maxLength('telephone_number', 11)
-            ->allowEmpty('telephone_number');
+            ->email('email')
+            ->allowEmpty('email');
 
         return $validator;
     }
@@ -98,7 +71,8 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['login']));
+        $rules->add($rules->isUnique(['username']));
+        $rules->add($rules->isUnique(['email']));
 
         return $rules;
     }

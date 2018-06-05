@@ -7,14 +7,9 @@ use Cake\ORM\Entity;
  * User Entity
  *
  * @property int $id
- * @property string $login
+ * @property string $username
  * @property string $password
- * @property string $cpf
- * @property string $fullname
- * @property string $date_of_birth
- * @property string $telephone_number
- *
- * @property \App\Model\Entity\Crime[] $crimes
+ * @property string $email
  */
 class User extends Entity
 {
@@ -29,13 +24,9 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'login' => true,
+        'username' => true,
         'password' => true,
-        'cpf' => true,
-        'fullname' => true,
-        'date_of_birth' => true,
-        'telephone_number' => true,
-        'crimes' => true
+        'email' => true
     ];
 
     /**
