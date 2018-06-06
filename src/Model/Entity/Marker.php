@@ -7,10 +7,14 @@ use Cake\ORM\Entity;
  * Marker Entity
  *
  * @property int $id
- * @property string $name
+ * @property string $title
  * @property string $address
  * @property float $lat
  * @property float $lng
+ * @property string $type
+ * @property \Cake\I18n\FrozenDate $date
+ * @property string $description
+ * @property \Cake\I18n\FrozenTime $schedule
  */
 class Marker extends Entity
 {
@@ -25,9 +29,13 @@ class Marker extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true,
+        'title' => true,
         'address' => true,
         'lat' => true,
-        'lng' => true
+        'lng' => true,
+        'type' => true,
+        'date' => true,
+        'description' => true,
+        'schedule' => true
     ];
 }

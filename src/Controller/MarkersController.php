@@ -18,32 +18,12 @@ class MarkersController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-
-    public $components = array('RequestHandler');
     public function index()
     {
         $markers = $this->paginate($this->Markers);
 
         $this->set(compact('markers'));
         $this->set('_serialize', ['markers']);
-    }
-
-    public function map()
-    {
-        
-    }
-
-
-    public function markersjson()
-    {
-        $this->autoRender = false;
-        $markers = $this->Markers->find()->select(['Markers.name', 'Markers.address', 'Markers.lat', 'Markers.lng']);
-
-        $resultJ = json_encode($markers);
-
-        $this->response->type('json');
-        $this->response->body($resultJ);
-        return $this->response;
     }
 
     /**
@@ -83,9 +63,6 @@ class MarkersController extends AppController
         $this->set(compact('marker'));
         $this->set('_serialize', ['marker']);
     }
-
-
-    
 
     /**
      * Edit method

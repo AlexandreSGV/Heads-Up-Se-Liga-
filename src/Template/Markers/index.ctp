@@ -3,7 +3,6 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Marker[]|\Cake\Collection\CollectionInterface $markers
  */
-
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -17,10 +16,14 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('address') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('lat') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('lng') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('type') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('description') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('schedule') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -28,10 +31,14 @@
             <?php foreach ($markers as $marker): ?>
             <tr>
                 <td><?= $this->Number->format($marker->id) ?></td>
-                <td><?= h($marker->name) ?></td>
+                <td><?= h($marker->title) ?></td>
                 <td><?= h($marker->address) ?></td>
                 <td><?= $this->Number->format($marker->lat) ?></td>
                 <td><?= $this->Number->format($marker->lng) ?></td>
+                <td><?= h($marker->type) ?></td>
+                <td><?= h($marker->date) ?></td>
+                <td><?= h($marker->description) ?></td>
+                <td><?= h($marker->schedule) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $marker->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $marker->id]) ?>

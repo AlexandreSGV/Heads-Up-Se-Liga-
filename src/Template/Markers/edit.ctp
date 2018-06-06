@@ -21,10 +21,14 @@
     <fieldset>
         <legend><?= __('Edit Marker') ?></legend>
         <?php
-            echo $this->Form->control('name');
+            echo $this->Form->control('title');
             echo $this->Form->control('address');
             echo $this->Form->control('lat');
             echo $this->Form->control('lng');
+            echo $this->Form->control('type');
+            echo $this->Form->control('date', ['empty' => true]);
+            echo $this->Form->control('description');
+            echo $this->Form->control('schedule', ['empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

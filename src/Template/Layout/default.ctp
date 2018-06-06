@@ -13,7 +13,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'Se Liga Igarassu';
+$cakeDescription = 'Se Liga - Igarassu';
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,13 +40,13 @@ $cakeDescription = 'Se Liga Igarassu';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <a target="_blank" href="../"><h1>Se Liga</h1></a>
+                <a href="../"><h1>Se Liga</h1></a>
             </li>
         </ul>
         <div class="top-bar-section">
             <ul class="right">
-                <li><a target="_blank" href="../markers/add">Reportar Incidente</a></li>
-        <li><a target="_blank" href="#">Contato</a></li>
+                <li><a href="../markers/add">Reportar Incidente</a></li>
+        <li><a href="#">Contato</a></li>
             </ul>
         </div>
     </nav>

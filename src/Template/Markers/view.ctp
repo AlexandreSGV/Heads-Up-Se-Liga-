@@ -17,12 +17,20 @@
     <h3><?= h($marker->name) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Name') ?></th>
-            <td><?= h($marker->name) ?></td>
+            <th scope="row"><?= __('Title') ?></th>
+            <td><?= h($marker->title) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Address') ?></th>
             <td><?= h($marker->address) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Type') ?></th>
+            <td><?= h($marker->type) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Description') ?></th>
+            <td><?= h($marker->description) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -35,6 +43,14 @@
         <tr>
             <th scope="row"><?= __('Lng') ?></th>
             <td><?= $this->Number->format($marker->lng) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Date') ?></th>
+            <td><?= h($marker->date) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Schedule') ?></th>
+            <td><?= h($marker->schedule) ?></td>
         </tr>
     </table>
 </div>
