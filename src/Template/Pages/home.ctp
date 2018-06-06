@@ -66,7 +66,8 @@ $cakeDescription = 'Se Liga - Igarassu';
         function myMap() {
             var myCenter = new google.maps.LatLng(-7.830136823,-34.903713147);
             var mapCanvas = document.getElementById("map");
-            var mapOptions = {center: myCenter, zoom: 13};
+            var mapOptions = {center: myCenter, zoom: 13, 
+  mapTypeId: 'satellite'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
             map.data.loadGeoJson(
       '/json/igarassu.geojson');
@@ -80,6 +81,29 @@ $cakeDescription = 'Se Liga - Igarassu';
                     title: "Olá"
                 });
             });
+
+var heatmapData = [
+  new google.maps.LatLng(-7.8348985, -34.88723365),
+  new google.maps.LatLng(-7.8505436, -34.8412284),
+  new google.maps.LatLng(-7.8342182, -34.8982199),
+  new google.maps.LatLng(-7.8668683, -34.9229392),
+  new google.maps.LatLng(37.782, -122.439),
+  new google.maps.LatLng(37.782, -122.437),
+  new google.maps.LatLng(37.782, -122.435),
+  new google.maps.LatLng(37.785, -122.447),
+  new google.maps.LatLng(37.785, -122.445),
+  new google.maps.LatLng(37.785, -122.443),
+  new google.maps.LatLng(37.785, -122.441),
+  new google.maps.LatLng(37.785, -122.439),
+  new google.maps.LatLng(37.785, -122.437),
+  new google.maps.LatLng(37.785, -122.435)
+];
+
+
+var heatmap = new google.maps.visualization.HeatmapLayer({
+  data: heatmapData
+});
+heatmap.setMap(map);
 
         }
 </script>
@@ -108,7 +132,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 
 <div id="map" style="width:100%;height:700px"></div>
 
-<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap'); ?>
+<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
 
 <div>
     <div class="inicio">

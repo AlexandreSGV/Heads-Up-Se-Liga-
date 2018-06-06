@@ -16,7 +16,8 @@
 				"Description": "IGARASSU \/ PE" 
 			}, 
 			"geometry": { 
-				"type": "Polygon", 
+				"type": "LineString", 
+				"strokeColor": "#FF0000",
 				"coordinates": [ 
 					[ -34.889422103347329, -7.804712685442041 ],
 					[ -34.84770310761229, -7.816015799289687 ],
