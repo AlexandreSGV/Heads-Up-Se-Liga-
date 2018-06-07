@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
+use Cake\Mailer\Email;
 
 /**
  * Contacts Controller
@@ -58,7 +60,7 @@ class ContactsController extends AppController
                   $email = new Email('default');
                   $email->from(['seligaigarassu@gmail.com' => 'Se Liga'])
                     ->to($contact['email'])
-                    ->subject('teste')
+                    ->subject('Ola')
                     ->send('BEM VINDO USUARIO ');
                 return $this->redirect(['action' => 'index']);
             }

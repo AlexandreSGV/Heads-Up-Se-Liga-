@@ -12,9 +12,14 @@
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-
-$content = explode("\n", $content);
-
-foreach ($content as $line) :
-    echo '<p> ' . $line . "</p>\n";
-endforeach;
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title><?= $this->fetch('title') ?></title>
+</head>
+<body>
+ <p>Olá <?= $nome ?>,</p>
+  
+ 
+</html>
