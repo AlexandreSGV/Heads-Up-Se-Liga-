@@ -55,7 +55,11 @@ class ContactsController extends AppController
             $contact = $this->Contacts->patchEntity($contact, $this->request->getData());
             if ($this->Contacts->save($contact)) {
                 $this->Flash->success(__('The contact has been saved.'));
-
+                  $email = new Email('default');
+                  $email->from(['seligaigarassu@gmail.com' => 'Se Liga'])
+                    ->to($contact['email'])
+                    ->subject('teste')
+                    ->send('BEM VINDO USUARIO ');
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The contact could not be saved. Please, try again.'));
