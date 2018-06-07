@@ -46,7 +46,7 @@ $cakeDescription = 'Se Liga - Igarassu';
         <div class="top-bar-section">
             <ul class="right">
                 <li><a href="../markers/add">Reportar Incidente</a></li>
-        <li><a href="#">Contato</a></li>
+                <li><a href="../contacts/add">Contato</a></li>
             </ul>
         </div>
     </nav>
