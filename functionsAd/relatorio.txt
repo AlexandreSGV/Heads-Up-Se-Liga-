@@ -1,2 +1,9 @@
 'atualizando serv 138'
-'atualizando serv 140'
+	Com a preparação do ambiente ok, atualizei o repositório dentro do servidor com o comando "git pull". Faltando a instalação do jason.
+
+'Preparando serv 140'
+	Preparação do ambiente com 75%, com algumas falhas depois de instalar o cakePHP, restava o composer depois de seguir alguns passos que se encontram no repositório de Bruce. Concluir a instalação do composer. Restando apenas uma configuração no apache2 para reconhecer o css do cakePHP.
+
+
+
+Ao concluir os 100% dessas atividades, irei preparar os servidores: 139, 145 e 132.
