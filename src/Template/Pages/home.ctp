@@ -150,7 +150,8 @@ heatmap.setMap(map);
             <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
     </div>
 </div>
-<footer>
+<div class='w3-container'>
+    <footer>
     <!DOCTYPE html>
         <div class="rodape">
             <table class="tabela">
@@ -174,6 +175,8 @@ heatmap.setMap(map);
             <p>Projeto desenvolvido por estudantes da Instituição Federal de Educação, Ciência e Tecnologia de Pernambuco</p>
         </div>
 </footer>
+   
+</div>
 
 
 </body>
