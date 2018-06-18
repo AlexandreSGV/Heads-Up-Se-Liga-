@@ -70,7 +70,7 @@ $cakeDescription = 'Se Liga - Igarassu';
   mapTypeId: 'satellite'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
             map.data.loadGeoJson(
-      '/json/igarassu.geojson');
+      '/seLiga/json/igarassu.geojson');
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
                 document.getElementById("lat").value = e.latLng.lat();
