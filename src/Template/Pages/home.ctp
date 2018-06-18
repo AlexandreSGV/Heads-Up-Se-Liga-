@@ -129,7 +129,7 @@ heatmap.setMap(map);
 
 <div id="left" align="center">
     <div class="inicio">
-    <button><a href=".../markers/add">Reportar Incidente</a></button>
+    <button><a href="markers/add">Reportar Incidente</a></button>
         <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
 
         <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
