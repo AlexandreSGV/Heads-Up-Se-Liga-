@@ -254,3 +254,13 @@ hr {
 .liprincipal{
 	font-size: 1.5em;
 }
+
+#left{
+    float: right;
+    width: 30%;
+}
+#map{
+    width:70%;
+    height:95%;
+    float: left;
+}

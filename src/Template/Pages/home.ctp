@@ -70,7 +70,7 @@ $cakeDescription = 'Se Liga - Igarassu';
   mapTypeId: 'satellite'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
             map.data.loadGeoJson(
-      '/seLiga/json/igarassu.geojson');
+      '/json/igarassu.geojson');
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
                 document.getElementById("lat").value = e.latLng.lat();
@@ -110,32 +110,26 @@ heatmap.setMap(map);
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
+        <ul class="title-area">
             <li class="name">
                 <h1>Se Liga</h1>
             </li>
         </ul>
-        <div class="top-bar-section">
+        <!-- <div class="top-bar-section">
             <ul class="right">
                 <li><a href="markers/add">Reportar Incidente</a></li>
 		<li><a href="contacts/add">Contato</a></li>
             </ul>
-        </div>
+        </div> -->
     </nav>
   
-
-<header>
-    <div class="header-title">
-        <h1>Acompanhe os registros de crimes que estão ocorrendo em Igarassu</h1>
-    </div>
-</header>
-
-<div id="map" style="width:100%;height:700px"></div>
+<div id="map"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
 
-<div>
+<div id="left" align="center">
     <div class="inicio">
+    <button><a href="markers/add">Reportar Incidente</a></button>
         <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
 
         <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
@@ -150,7 +144,7 @@ heatmap.setMap(map);
             <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
     </div>
 </div>
-    <footer>
+    <!-- <footer>
     <!DOCTYPE html>
         <html>
         <meta name='viewport' content="width=device-with, initial-scal=1">
@@ -176,11 +170,12 @@ heatmap.setMap(map);
                     </tr>   
                 </table>
                 <p>Projeto desenvolvido por estudantes da Instituição Federal de Educação, Ciência e Tecnologia de Pernambuco</p>
+                <a href="contacts/add">Contato</a>
             </div>
     </footer>
    
     </div>
-
+ -->
 
     </body>
 </html>
