@@ -322,7 +322,8 @@ pre {
     background: #45a1b5;
 }
 .top-bar.expanded{
-    width: 70%!important;
+    width: 100%!important;
+    height: 6%;
 }
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
     background: #44a3b6;

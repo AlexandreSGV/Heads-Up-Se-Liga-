@@ -61,51 +61,48 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('home.css') ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
 <script type="text/javascript">
-
-    
+        var marker = null;
         function myMap() {
+            var geocoder = new google.maps.Geocoder;
+            var infowindow = new google.maps.InfoWindow;
             var myCenter = new google.maps.LatLng(-7.830136823,-34.903713147);
             var mapCanvas = document.getElementById("map");
-            var mapOptions = {center: myCenter, zoom: 13, 
-  mapTypeId: 'satellite'};
+            var mapOptions = {center: myCenter, zoom: 13, mapTypeId: 'roadmap'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
-            map.data.loadGeoJson(
-      '/json/igarassu.geojson');
+
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
-                document.getElementById("lat").value = e.latLng.lat();
-                document.getElementById("lng").value = e.latLng.lng();
-                var marker = new google.maps.Marker({
-                    position: markerLatLng,
-                    map: map,
-                    title: "Olá"
-                });
+                document.getElementById("latlng").value = e.latLng.lat() + "," + e.latLng.lng();
+                geocodeLatLng(geocoder, map, infowindow);
             });
+        }
+        function geocodeLatLng(geocoder, map, infowindow) {
+            if (marker) {
+                marker.setMap(null);
+            }
+            var input = document.getElementById('latlng').value;
+            var latlngStr = input.split(',', 2);
+            var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
 
-var heatmapData = [
-  new google.maps.LatLng(-7.8348985, -34.88723365),
-  new google.maps.LatLng(-7.8505436, -34.8412284),
-  new google.maps.LatLng(-7.8342182, -34.8982199),
-  new google.maps.LatLng(-7.8668683, -34.9229392),
-  new google.maps.LatLng(37.782, -122.439),
-  new google.maps.LatLng(37.782, -122.437),
-  new google.maps.LatLng(37.782, -122.435),
-  new google.maps.LatLng(37.785, -122.447),
-  new google.maps.LatLng(37.785, -122.445),
-  new google.maps.LatLng(37.785, -122.443),
-  new google.maps.LatLng(37.785, -122.441),
-  new google.maps.LatLng(37.785, -122.439),
-  new google.maps.LatLng(37.785, -122.437),
-  new google.maps.LatLng(37.785, -122.435)
-];
-
-
-var heatmap = new google.maps.visualization.HeatmapLayer({
-  data: heatmapData
-});
-heatmap.setMap(map);
-
-
+            geocoder.geocode({'location': latlng}, function(results, status) {
+                if (status === 'OK') {
+                    if (results[1]) {
+                        marker = new google.maps.Marker({
+                            position: latlng,
+                            map: map
+                        });
+                        infowindow.setContent(results[1].formatted_address);
+                        infowindow.open(map, marker);
+                        document.getElementById("address").value = results[1].formatted_address;
+                    } 
+                    else {
+                        window.alert('No results found');
+                    }
+                } 
+                else {
+                    window.alert('Geocoder failed due to: ' + status);
+                }
+            });
         }
 </script>
 </head>
@@ -127,61 +124,29 @@ heatmap.setMap(map);
 <div id="map"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
-
+<div id="submit"></div>
 <div id="left" align="center">
     <div class="inicio">
     <?= $this->Form->create($marker) ?>
 <fieldset>
-        <legend><?= __('Reportar Incidente') ?></legend>
+    <input disabled="disabled" type="hidden" id="latlng" value="40.714224,-73.961452">
+        <legend><?=('Registrar Crime') ?></legend>
     
         <?php
             echo $this->Form->control('title',['label' => 'Título']);
-            echo $this->Form->control('address',['label' => 'Local do Ocorrido']);
-            echo $this->Form->control('lat');
-            echo $this->Form->control('lng');
-            echo $this->Form->control('type');
-            echo $this->Form->control('date', ['empty' => true]);
-            echo $this->Form->control('description');
-            echo $this->Form->control('schedule', ['empty' => true]);
+            echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)','disabled' => 'disabled', 'id' => 'address']);
+            echo $this->Form->control('lat', ['type'=>'hidden', 'disabled' => 'disabled']);
+            echo $this->Form->control('lng', ['type'=>'hidden', 'disabled' => 'disabled']);
+            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['a','b','c','a','b','c','a','b','c','a','b','c'],]);
+            echo $this->Form->control('date',['label' => 'Dia' ,'empty' => true]);
+            echo $this->Form->control('schedule',['label' => 'Horário' , 'empty' => true]);
+            echo $this->Form->control('description',['label' => 'Descrição', 'type' => 'textarea']);
 
         ?>
         </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Registrar')) ?>
     <?= $this->Form->end() ?>
     </div>
 </div>
-    <!-- <footer>
-    <!DOCTYPE html>
-        <html>
-        <meta name='viewport' content="width=device-with, initial-scal=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <div class='w3-container'>
-            <div class="rodape">
-                <table class="tabela">
-                    <tr>
-                        <td>
-                            <a href="http://www.ifpe.edu.br">
-                        </td>
-                        <td>
-                            <a href="https://github.com/matheuszero/projeto-1.git">
-                            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-whatsapp fa-5x" aria-hidden="true"></i>
-                        </td>
-                    </tr>   
-                </table>
-                <p>Projeto desenvolvido por estudantes da Instituição Federal de Educação, Ciência e Tecnologia de Pernambuco</p>
-                <a href="contacts/add">Contato</a>
-            </div>
-    </footer>
-   
-    </div>
- -->
-
     </body>
 </html>
