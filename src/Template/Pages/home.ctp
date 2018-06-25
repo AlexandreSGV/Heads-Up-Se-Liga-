@@ -66,16 +66,16 @@ $cakeDescription = 'Se Liga - Igarassu';
 
     
         function myMap() {
-            var myCenter = new google.maps.LatLng(-7.830136823,-34.903713147);
+            var myCenter = new google.maps.LatLng(-7.836800, -34.915441);
             var mapCanvas = document.getElementById("map");
-            var mapOptions = {center: myCenter, zoom: 13, 
+            var mapOptions = {center: myCenter, zoom: 14, 
   mapTypeId: 'roadmap'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
             map.data.loadGeoJson(
       '/json/igarassu.geojson');
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
-                document.getElementById("lat").value = e.latLng.lat();
+                document.getElem0entById("lat").value = e.latLng.lat();
                 document.getElementById("lng").value = e.latLng.lng();
                 var marker = new google.maps.Marker({
                     position: markerLatLng,
