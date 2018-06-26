@@ -7,3 +7,15 @@
 
 
 Ao concluir os 100% dessas atividades, irei preparar os servidores: 139, 145 e 132.
+
+
+
+26/06
+	Atividade da semana
+	
+
+	Preparação dos ambientes '...138'; '...139'; '...142'.
+
+	Com a criação do arquivo "seLiga.conf" que foi implementado para o apache saber como se comportar com a paginação para o cake.
+seguindo a conclusão da implatação do cake, com a instalação do composer nos servidores citados a cima. 
+Que se encontra no site:http://alexandrevianna.net/web-ii/.  
