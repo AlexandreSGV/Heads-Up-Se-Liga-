@@ -14,8 +14,12 @@ Ao concluir os 100% dessas atividades, irei preparar os servidores: 139, 145 e 1
 	Atividade da semana
 	
 
-	Preparação dos ambientes '...138'; '...139'; '...142'.
+Preparação dos ambientes '...138'; '...139'; '...142'.
 
 	Com a criação do arquivo "seLiga.conf" que foi implementado para o apache saber como se comportar com a paginação para o cake.
 seguindo a conclusão da implatação do cake, com a instalação do composer nos servidores citados a cima. 
 Que se encontra no site:http://alexandrevianna.net/web-ii/.  
+
+
+	
+	Para ativação do modo rewrite do php que é necessário para uma melhor interpretação do apache com a aplicação, será necessário instalar uma extenção do php e seguir alguns passos que se econtram no repositório do Bruce:https://github.com/brucewillism/infosus/blob/master/Passos_projeto_no_servidor_debian.md
