@@ -68,7 +68,7 @@ $cakeDescription = 'Se Liga - Igarassu';
             var infowindow = new google.maps.InfoWindow;
             var myCenter = new google.maps.LatLng(-7.830136823,-34.903713147);
             var mapCanvas = document.getElementById("map");
-            var mapOptions = {center: myCenter, zoom: 13, mapTypeId: 'roadmap'};
+            var mapOptions = {center: myCenter, zoom: 14, mapTypeId: 'roadmap'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
 
             map.addListener('click', function(e) {
@@ -125,7 +125,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
 <div id="submit"></div>
-<div id="left" align="center">
+<div id="left" align="left">
     <div class="inicio">
     <?= $this->Form->create($marker) ?>
 <fieldset>
