@@ -59,7 +59,8 @@
         </div>
     </form>
     <div class="row">
-      <input type="submit" value="Enviar">
+            <a href="../" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Home</a>
+      <input type="submit" value="Enviar"> 
     </div>
 
     </fieldset>
