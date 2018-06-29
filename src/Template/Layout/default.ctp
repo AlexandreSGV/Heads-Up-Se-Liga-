@@ -53,27 +53,11 @@ $cakeDescription = 'Se Liga - Igarassu';
         <?= $this->fetch('content') ?>
     </div>
     <footer>
-        <meta name='viewport' content="width=device-with, initial-scal=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <div class="rodape">
-            <div class='w3-container'>
-                <table class="tabela">
-                    <tr>
-                        <td>
-                            <a href="http://www.ifpe.edu.br">
-                        </td>
-                        <td>
-                            <a href="">
-                            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
-                            </a>
-                        </td>
-                    </tr>   
-                </table>
-                <p>Projeto desenvolvido por estudantes da Instituição Federal de Educação, Ciência e Tecnologia de Pernambuco</p>
-            </a>   
+    <div class="w3-right-align w3-margin-top">
+            <h5>Footer</h5>
+            <p>Footer information goes here</p>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
 

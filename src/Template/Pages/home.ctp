@@ -35,6 +35,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <title>
         <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
@@ -59,7 +60,8 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
+    <?= $this->Html->css('https://www.w3schools.com/w3css/4/w3.css') ?>
+    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
 <script type="text/javascript">
 
     
@@ -109,11 +111,17 @@ heatmap.setMap(map);
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area">
+       <!--  <ul class="title-area">
             <li class="name">
                 <h1>Se Liga</h1>
             </li>
-        </ul>
+        </ul> -->
+        <div class="name">
+            <a href="../" class="w3-bar-item w3-button" style="color: white;" >Se Liga</a>
+            <a href="#" class="w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
+            <a href="../contacts/add" class="w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
+        </div>
+        
         <!-- <div class="top-bar-section">
             <ul class="right">
                 <li><a href="markers/add">Reportar Incidente</a></li>
@@ -143,38 +151,13 @@ heatmap.setMap(map);
             <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
     </div>
 </div>
-    <!-- <footer>
-    <!DOCTYPE html>
-        <html>
-        <meta name='viewport' content="width=device-with, initial-scal=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <div class='w3-container'>
-            <div class="rodape">
-                <table class="tabela">
-                    <tr>
-                        <td>
-                            <a href="http://www.ifpe.edu.br">
-                        </td>
-                        <td>
-                            <a href="https://github.com/matheuszero/projeto-1.git">
-                            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <i class="fa fa-facebook fa-5x" aria-hidden="true"></i>
-                        </td>
-                        <td>
-                            <i class="fa fa-whatsapp fa-5x" aria-hidden="true"></i>
-                        </td>
-                    </tr>   
-                </table>
-                <p>Projeto desenvolvido por estudantes da Instituição Federal de Educação, Ciência e Tecnologia de Pernambuco</p>
-                <a href="contacts/add">Contato</a>
-            </div>
+
+    <footer>
+        <!-- <div class="w3-right-align w3-margin-top">
+            <h5>Footer</h5>
+            <p>Footer information goes here</p>
+        </div> -->
     </footer>
-   
-    </div>
- -->
 
     </body>
 </html>
