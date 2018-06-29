@@ -117,9 +117,9 @@ heatmap.setMap(map);
             </li>
         </ul> -->
         <div class="name">
-            <a href="../" class="w3-bar-item w3-button" style="color: white;" >Se Liga</a>
-            <a href="#" class="w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
-            <a href="../contacts/add" class="w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
+            <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
+            <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
+            <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
         </div>
         
         <!-- <div class="top-bar-section">
@@ -137,7 +137,11 @@ heatmap.setMap(map);
 <div id="left" align="center">
     <div class="inicio">
     <button><a href="markers/add">Reportar Incidente</a></button>
+<<<<<<< HEAD
+        <!-- <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
+=======
        <!--  <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3> -->
+>>>>>>> 4c85df08716e294dc89765072730a08b9dc20477
 
       <!--   <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
 

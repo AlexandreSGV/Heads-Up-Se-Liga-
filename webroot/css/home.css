@@ -90,6 +90,16 @@ h3, h4 {
     margin-bottom: 20px;
 }
 
+.link-seliga{
+    font-size: 30px;
+}
+.link-contato{
+    font-size: 20px;
+}
+.link-sobre{
+    font-size: 20px;
+}
+
 .more {
     color: #ffffff;
     background-color: #d33d44;
@@ -244,6 +254,7 @@ hr {
 }
 .inicio {
 	padding-top: 15px!important;
+    font-size: 30px;
 }
 .h3principal{
 	font-weight: bold;
