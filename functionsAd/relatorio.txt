@@ -22,18 +22,27 @@ Que se encontra no site:http://alexandrevianna.net/web-ii/.
 
 
 	
-	Para ativação do modo rewrite do php que é necessário para uma melhor interpretação do apache com a aplicação, será necessário instalar uma extenção do php e seguir alguns passos que se econtram no repositório do Bruce:https://github.com/brucewillism/infosus/blob/master/Passos_projeto_no_servidor_debian.md
+	Para ativação do modo rewrite do php que é necessário.A innterpretação do apache com a aplicação, será necessário instalar uma extenção do php e seguir alguns passos que se econtram no repositório do Bruce:https://github.com/brucewillism/infosus/blob/master/Passos_projeto_no_servidor_debian.md
 
 
 28/06
 
 	Complementando Atividades
+
 Não retratado antes, porém, o composer na sua especificação do php na hora da instalação, é necessário colocar a especificação da versão dele e é necessário que que seja a mesma do php instalado.
 
-
-
-É necessário também, depois da implementação do arquivo de indenficação de paginação e implantação colocada no apache2, que no nosso caso, é denominada como "seLiga.conf"... Apontar para o apache2 que existe esta nova configuração e liga-la com os comandos em ordens : 
+É necessário também, depois da implementação do arquivo de indenficação de paginação e implantação colocada no apache2, que no nosso caso, é denominada como "seLiga.conf". Apontar para o apache2 que existe esta nova configuração e liga-la com os comandos em ordens : 
 "ls -la /etc/apache2/sites-enables/seLiga.conf"
 "a2ensite seliga.conf"
 "systemctl reload apache2" 
 Para que assim o comportamento do apache2 adicione mais uma reação para o recebimento da aplicação do framework cakephp 
+
+
+
+29/06
+	
+
+	Atividade Primordial
+
+Se o apche2 não estiver configurado para o modo rewrite que é o modo de reescrita de url que o apache2 utiliza. 
+Para ativação e ficar mais fácil identificação segue link de passos da ativação do modo de reescritura de url: https://www.vivaolinux.com.br/dica/Ativando-modo-de-reescrita-de-URL-mod-rewrite-no-Apache
