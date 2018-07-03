@@ -137,7 +137,7 @@ $cakeDescription = 'Se Liga - Igarassu';
             echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)','disabled' => 'disabled', 'id' => 'address']);
             echo $this->Form->control('lat', ['type'=>'hidden', 'disabled' => 'disabled']);
             echo $this->Form->control('lng', ['type'=>'hidden', 'disabled' => 'disabled']);
-            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['Assassinato','Latrocinio','Espancamento','Feminicidio'],]);
+            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['Assassinato','Latrocinio','Espancamento','Feminicidio','Infanticídio' 'Furto', 'Roubo',],]);
             echo $this->Form->control('date',['label' => 'Dia' ,'empty' => true]);
             echo $this->Form->control('schedule',['label' => 'Horário' , 'empty' => true]);
             echo $this->Form->control('description',['label' => 'Descrição', 'type' => 'textarea']);
@@ -149,4 +149,4 @@ $cakeDescription = 'Se Liga - Igarassu';
     </div>
 </div>
     </body>
-</html>
+</h tml>
