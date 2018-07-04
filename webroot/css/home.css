@@ -16,6 +16,15 @@
     line-height: 27px;
     color: #404041;
 }
+.navbar a{
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+
+}
 
 a {
     color: #ffffff;
@@ -93,7 +102,7 @@ h3, h4 {
 
 .link-seliga{
     font-size: 30px;
-    padding: 10px 45px;
+    
 
 }
 .link-contato{
@@ -259,9 +268,7 @@ hr {
 	padding-top: 15px!important;
     font-size: 20px;
 }
-.name{
-    padding: 10px , 20px;
-}
+
 .h3principal{
 	font-weight: bold;
 }

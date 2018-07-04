@@ -110,58 +110,29 @@ heatmap.setMap(map);
 </script>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-       <!--  <ul class="title-area">
-            <li class="name">
-                <h1>Se Liga</h1>
-            </li>
-        </ul> -->
-        <div class="name">
+  <div class="w3-top">
+    <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
+       
+  
+        <div class="navbar a">
             <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
             <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
             <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
         </div>
-        
-        <!-- <div class="top-bar-section">
-            <ul class="right">
-                <li><a href="markers/add">Reportar Incidente</a></li>
-		<li><a href="contacts/add">Contato</a></li>
-            </ul>
-        </div> -->
+        </div>
+      
     </nav>
   
 <div id="map"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
 
+<div class="w3-container">
 <div id="left" align="center">
-    <div class="inicio">
-    <button><a href="markers/add">Registrar Crime</a></button>
-
-        <!-- <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
-=======
-       <!--  <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3> -->
-
-
-      <!--   <h4 class="indexh3"> O Se Liga é uma iniciativa desenvolvida por alunos do Instituto Federal de Pernambuco -  Campus Igarassu. Criado com o intuito principal de concentrar informações relevantes sobre a situação criminalística da cidade de Igarassu.
-
-        <h4 class="indexh3 h3principal">FUNCIONALIDADES:</h4>
-
-        <ul class="ulprincipal">
-            <li class="liprincipal">Mapa de Calor</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-            <li class="liprincipal">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li> -->
-    </div>
+    <button><a href="markers/add">Registrar Crime</a></button>     
+</div>
 </div>
 
-    <footer>
-        <!-- <div class="w3-right-align w3-margin-top">
-            <h5>Footer</h5>
-            <p>Footer information goes here</p>
-        </div> -->
-    </footer>
-
+   
     </body>
 </html>

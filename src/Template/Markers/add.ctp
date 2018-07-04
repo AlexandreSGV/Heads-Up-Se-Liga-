@@ -108,11 +108,18 @@ $cakeDescription = 'Se Liga - Igarassu';
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="top-bar">
+    <div class="navbar a">
+    <li>
+        <?= $this->Html->link("SeLiga","/#intro")?>
+    </li>
+   
+        
+    </div>
+        <!-- <ul class="top-bar">
             <li class="name">
                 <h1>Se Liga</h1>
             </li>
-        </ul>
+        </ul> -->
         <!-- <div class="top-bar-section">
             <ul class="right">
                 <li><a href="markers/add">Reportar Incidente</a></li>

@@ -320,7 +320,7 @@ pre {
 
 .top-bar.expanded .title-area {
     background: #01545b;
-   
+    margin-right: 7px;
 }
 
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {

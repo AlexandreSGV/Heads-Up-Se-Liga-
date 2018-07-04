@@ -52,12 +52,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
-    <div class="w3-right-align w3-margin-top">
-            <h5>Footer</h5>
-            <p>Footer information goes here</p>
-        </div>
-    </footer>
+
 </body>
 </html>
 
