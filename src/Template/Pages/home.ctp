@@ -136,7 +136,7 @@ heatmap.setMap(map);
 
 <div id="left" align="center">
     <div class="inicio">
-    <button><a href="markers/add">Reportar Incidente</a></button>
+    <button><a href="markers/add">Registrar Crime</a></button>
 
         <!-- <h3 class="indexh3 h3principal">MAS... O QUE É O SE LIGA?</h3>
 =======

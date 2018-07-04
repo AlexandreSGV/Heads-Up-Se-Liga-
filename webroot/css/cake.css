@@ -323,7 +323,8 @@ pre {
 }
 .top-bar.expanded{
     width: 100%!important;
-    height: 6%;
+    height: 7%;
+
 }
 .top-bar.expanded, .top-bar,.top-bar-section ul li,.top-bar-section li:not(.has-form) a:not(.button) {
     background: #44a3b6;
@@ -339,7 +340,7 @@ pre {
     font-size: 0.875rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0.4375rem 0.875rem;
+    padding: 0.4575rem 0.885rem;
 }
 
 #actions-sidebar {

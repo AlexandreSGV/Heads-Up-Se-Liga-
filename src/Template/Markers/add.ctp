@@ -108,7 +108,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area">
+        <ul class="top-bar">
             <li class="name">
                 <h1>Se Liga</h1>
             </li>
