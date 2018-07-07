@@ -76,57 +76,6 @@ $cakeDescription = 'Se Liga - Igarassu';
                 document.getElementById("latlng").value = e.latLng.lat() + "," + e.latLng.lng();
                 geocodeLatLng(geocoder, map, infowindow);
             });
-            
-            /*var map = new google.maps.Map(document.getElementById("myMap"),
-                mapOptions);
-
-
-                var localizacao = [];
-                localizacao.push({
-                    nome: "Joinville",
-                    latlng: new google.maps.LatLng(-26.2784142, -48.8563719)
-                });
-                localizacao.push({
-                    nome: "Balneário Camboriú",
-                    latlng: new google.maps.LatLng(-27.8161, -48.626631)
-                });
-                localizacao.push({
-                    nome: "Rio Grande do Sul",
-                    latlng: new google.maps.LatLng(-3.4163414, -53.6677564)
-                });
-                localizacao.push({
-                    nome: "Florianópolis",
-                    latlng: new google.maps.LatLng(-27.6142358, -48.4828248)
-                });
-                localizacao.push({
-                    nome: "Brusque",
-                    latlng: new google.maps.LatLng(-27.912233, -48.8892335)
-                });
-
-                for (var i = ; i < localizacao.length; i++) {
-                    var marker = new google.maps.Marker({
-                        position: localizacao[i].latlng,
-                        icon: 'cake.icon.png',
-                        map: map,
-                        title: localizacao[i].nome
-                    });
-                }
-
-                var localizacao = [];
-                localizacao.push({
-                    nome: "Gaspar",
-                    latlng: new google.maps.LatLng(-26.9263595, -48.9522665)
-                });*/
-
-                /*for (var i = ; i < localizacao.length; i++) {
-                    var marker = new google.maps.Marker({
-                        position: localizacao[i].latlng,
-                        icon: 'inativo2.png',
-                        map: map,
-                        title: localizacao[i].nome
-                    });
-                }*/
-
         }
         function geocodeLatLng(geocoder, map, infowindow) {
             if (marker) {
@@ -156,32 +105,20 @@ $cakeDescription = 'Se Liga - Igarassu';
                 }
             });
         }
-        window.onload = myMap;
-</script> 
 
+</script> 
            
         
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
     <div class="navbar a">
-    <li>
-        <?= $this->Html->link("SeLiga","/#intro")?>
-    </li>
+        <li>
+            <?= $this->Html->link("SeLiga","/#intro")?>
+        </li>
    
         
     </div>
-        <!-- <ul class="top-bar">
-            <li class="name">
-                <h1>Se Liga</h1>
-            </li>
-        </ul> -->
-        <!-- <div class="top-bar-section">
-            <ul class="right">
-                <li><a href="markers/add">Reportar Incidente</a></li>
-        <li><a href="contacts/add">Contato</a></li>
-            </ul>
-        </div> -->
     </nav>
   
 <div id="map"></div>
@@ -212,4 +149,4 @@ $cakeDescription = 'Se Liga - Igarassu';
     </div>
 </div>
     </body>
-</h tml>
+</html>
