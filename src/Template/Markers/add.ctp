@@ -51,6 +51,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->fetch('script') ?>
  <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1., user-scalable=no" />
     <title>
         <?= $cakeDescription ?>
     </title>
@@ -60,7 +61,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
-<script type="text/javascript">
+    <script type="text/javascript">
         var marker = null;
         function myMap() {
             var geocoder = new google.maps.Geocoder;
@@ -75,6 +76,57 @@ $cakeDescription = 'Se Liga - Igarassu';
                 document.getElementById("latlng").value = e.latLng.lat() + "," + e.latLng.lng();
                 geocodeLatLng(geocoder, map, infowindow);
             });
+            
+            /*var map = new google.maps.Map(document.getElementById("myMap"),
+                mapOptions);
+
+
+                var localizacao = [];
+                localizacao.push({
+                    nome: "Joinville",
+                    latlng: new google.maps.LatLng(-26.2784142, -48.8563719)
+                });
+                localizacao.push({
+                    nome: "Balneário Camboriú",
+                    latlng: new google.maps.LatLng(-27.8161, -48.626631)
+                });
+                localizacao.push({
+                    nome: "Rio Grande do Sul",
+                    latlng: new google.maps.LatLng(-3.4163414, -53.6677564)
+                });
+                localizacao.push({
+                    nome: "Florianópolis",
+                    latlng: new google.maps.LatLng(-27.6142358, -48.4828248)
+                });
+                localizacao.push({
+                    nome: "Brusque",
+                    latlng: new google.maps.LatLng(-27.912233, -48.8892335)
+                });
+
+                for (var i = ; i < localizacao.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: localizacao[i].latlng,
+                        icon: 'cake.icon.png',
+                        map: map,
+                        title: localizacao[i].nome
+                    });
+                }
+
+                var localizacao = [];
+                localizacao.push({
+                    nome: "Gaspar",
+                    latlng: new google.maps.LatLng(-26.9263595, -48.9522665)
+                });*/
+
+                /*for (var i = ; i < localizacao.length; i++) {
+                    var marker = new google.maps.Marker({
+                        position: localizacao[i].latlng,
+                        icon: 'inativo2.png',
+                        map: map,
+                        title: localizacao[i].nome
+                    });
+                }*/
+
         }
         function geocodeLatLng(geocoder, map, infowindow) {
             if (marker) {
@@ -104,7 +156,11 @@ $cakeDescription = 'Se Liga - Igarassu';
                 }
             });
         }
-</script>
+        window.onload = myMap;
+</script> 
+
+           
+        
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
