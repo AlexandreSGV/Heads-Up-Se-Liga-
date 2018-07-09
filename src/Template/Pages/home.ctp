@@ -108,51 +108,6 @@ heatmap.setMap(map);
 
         }
 </script>
-<script type="text/javascript">
-    
-        function initialize() {
-            var myCenter = new google.maps.LatLng(-7.830136823,-34.903713147);
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {center: myCenter, zoom: 13, mapTypeId: 'roadmap'};
-            var map = new google.maps.Map(mapCanvas, mapOptions);                
-                var map = new google.maps.Map(document.getElementById("myMap"),
-                mapOptions);
-
-
-                var localizacao = [];
-                localizacao.push({
-                    nome: "Joinville", //substituir pelos nossos endereços
-                    latlng: new google.maps.LatLng(-26.2784142, -48.8563719)
-                });
-                localizacao.push({
-                    nome: "Balneário Camboriú",
-                    latlng: new google.maps.LatLng(-27.8161, -48.626631)
-                });
-                localizacao.push({
-                    nome: "Rio Grande do Sul",
-                    latlng: new google.maps.LatLng(-3.4163414, -53.6677564)
-                });
-                localizacao.push({
-                    nome: "Florianópolis",
-                    latlng: new google.maps.LatLng(-27.6142358, -48.4828248)
-                });
-                localizacao.push({
-                    nome: "Brusque",
-                    latlng: new google.maps.LatLng(-27.912233, -48.8892335)
-                });
-
-                for (var i = ; i < localizacao.length; i++) {
-                    var marker = new google.maps.Markers({
-                        position: localizacao[i].latlng,
-                        icon: 'cake.icon.png',
-                        map: map,
-                        title: localizacao[i].nome
-                    });
-                }
-
-            }
-            window.onload = initialize;    
-</script>
 </head>
 <body>
   <div class="w3-top">

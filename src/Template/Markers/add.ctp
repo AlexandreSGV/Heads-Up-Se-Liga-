@@ -60,6 +60,8 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('contact.css') ?>
+    <?= $this->Html->css('w3.css') ?>
     <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
     <script type="text/javascript">
         var marker = null;
@@ -107,8 +109,7 @@ $cakeDescription = 'Se Liga - Igarassu';
         }
 
 </script> 
-           
-        
+
 </head>
 <body>
     <div class="w3-top">
@@ -129,9 +130,10 @@ $cakeDescription = 'Se Liga - Igarassu';
     <div class="inicio">
     <?= $this->Form->create($marker) ?>
 <fieldset>
+    
     <input disabled="disabled" type="hidden" id="latlng" value="40.714224,-73.961452">
         <legend><?=('Registrar Crime') ?></legend>
-    
+
         <?php
             echo $this->Form->control('title',['label' => 'Título']);
             echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)','disabled' => 'disabled', 'id' => 'address']);
@@ -148,5 +150,6 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Form->end() ?>
     </div>
 </div>
-    </body>
+
+</body>
 </html>
