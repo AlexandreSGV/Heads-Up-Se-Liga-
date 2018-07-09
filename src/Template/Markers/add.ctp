@@ -111,14 +111,17 @@ $cakeDescription = 'Se Liga - Igarassu';
         
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+ <div class="w3-top">
+    <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
     <div class="navbar a">
-        <li>
+        <li style="list-style: none;">
             <?= $this->Html->link("SeLiga","/#intro")?>
+                
         </li>
    
         
     </div>
+  </div>
     </nav>
   
 <div id="map"></div>
