@@ -111,19 +111,16 @@ $cakeDescription = 'Se Liga - Igarassu';
         
 </head>
 <body>
- <div class="w3-top">
-    <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
-    <div class="navbar a">
-        <li style="list-style: none;">
-            <?= $this->Html->link("SeLiga","/#intro")?>
+    <div class="w3-top">
+        <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
+            <div class="navbar a">
+                <li style="list-style: none;">
+                    <?= $this->Html->link("SeLiga","/#intro")?>
                 
-        </li>
-   
-        
+                </li>
+            </div>
+        </nav>
     </div>
-  </div>
-    </nav>
-  
 <div id="map"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>

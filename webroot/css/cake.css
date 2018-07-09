@@ -393,7 +393,9 @@ fieldset {
 }
 
 fieldset legend {
-    border-bottom: 2px solid #1798A5;
+    color: #fafafa;
+    font-size: 30px;
+    border-bottom: 2px solid #fafafa;
     width: 100%;
     line-height: 2rem;
 }

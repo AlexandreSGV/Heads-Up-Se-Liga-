@@ -86,6 +86,7 @@ header .header-title h1 {
 }
 
 header h1 {
+    padding: 10%;
     color: #fff;
      
 }

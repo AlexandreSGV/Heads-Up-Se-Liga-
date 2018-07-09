@@ -3,10 +3,11 @@
 }
 
 input[type=text], select, textarea {
+    background: #44a3b6;
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid #fff;
+    border-radius: 20px;
     resize: vertical;
 }
 
@@ -16,11 +17,11 @@ label {
 }
 
 input[type=submit] {
-    background-color: #44A1B5;
+    background-color: #44a3b6;
     color: white;
     padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
+    border: 2px solid;
+    border-radius: 20px;
     cursor: pointer;
     float: right;
 }

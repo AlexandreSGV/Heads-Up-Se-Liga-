@@ -60,7 +60,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
-    <?= $this->Html->css('https://www.w3schools.com/w3css/4/w3.css') ?>
+    <?= $this->Html->css('w3.css') ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
 <script type="text/javascript">
 
@@ -71,8 +71,8 @@ $cakeDescription = 'Se Liga - Igarassu';
             var mapOptions = {center: myCenter, zoom: 14, 
   mapTypeId: 'roadmap'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
-            map.data.loadGeoJson(
-      '/json/igarassu.geojson');
+      //       map.data.loadGeoJson(
+      // '/json/igarassu.geojson');
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
                 document.getElem0entById("lat").value = e.latLng.lat();

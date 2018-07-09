@@ -306,6 +306,7 @@ a {
     background-color: inherit;
     text-align: center;
     cursor: pointer;
+    white-space: nowrap
 }
 
 .w3-btn:hover {
@@ -517,17 +518,17 @@ a {
 .w3-bar-block .w3-bar-item {
     width: 100%;
     display: block;
-    padding: 12px 16px;
-    text-align: center;
+    padding: 8px 16px;
+    text-align: left;
     border: none;
     white-space: normal;
     float: none;
     outline: 0
 }
 
-/*.w3-bar-block.w3-center .w3-bar-item {
-    text-align:
-}*/
+.w3-bar-block.w3-center .w3-bar-item {
+    text-align: center
+}
 
 .w3-block {
     display: block;
@@ -767,7 +768,7 @@ a {
         text-align: center
     }
 
-    .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile {
+    .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button {
         width: 100%
     }
 }
@@ -1317,7 +1318,7 @@ a {
 }
 
 .w3-right {
-    float: right !important
+    float: right!important
 }
 
 .w3-button:hover {
