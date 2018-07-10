@@ -3,9 +3,8 @@
 }
 
 input[type=text], select, textarea {
-    background: #44a3b6;
     width: 100%;
-    padding: 12px;
+    padding: 1px;
     border: 2px solid #fff;
     border-radius: 20px;
     resize: vertical;

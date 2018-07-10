@@ -72,8 +72,6 @@ $cakeDescription = 'Se Liga - Igarassu';
             var mapOptions = {center: myCenter, zoom: 14, 
   mapTypeId: 'roadmap'};
             var map = new google.maps.Map(mapCanvas, mapOptions);
-      //       map.data.loadGeoJson(
-      // '/json/igarassu.geojson');
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
                 document.getElem0entById("lat").value = e.latLng.lat();
