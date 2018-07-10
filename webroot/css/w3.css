@@ -39,7 +39,7 @@ audio:not([controls]) {
 }
 
 a {
-    background-color: transparent;
+    background-color: #43a3b6;
     -webkit-text-decoration-skip: objects
 }
 

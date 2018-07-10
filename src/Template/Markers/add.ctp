@@ -121,9 +121,8 @@ $cakeDescription = 'Se Liga - Igarassu';
        
   
         <div class="navbar a">
-            <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
-            <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
-            <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
+            <a href="../" class="link-seliga w3-bar-item w3-button prin" style="color: white;font-size:  40px;" >Se Liga</a>
+            <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;font-size:  20px;" >Fale Conosco</a>
         </div>
           </nav>
       </div>
@@ -140,7 +139,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     
         <?php
             echo $this->Form->control('name',['label' => 'Nome']);
-            echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)', 'id' => 'address']);
+            echo $this->Form->control('address',['label' => 'Selecione no mapa o local do ocorrido)', 'id' => 'address']);
             echo $this->Form->control('title',['label' => 'Título']);
             echo "<label>Data / Hora</label>";
             echo $this->Form->control('Date',['type' => 'datetime', 'label' => '' ,'empty' => true]);
@@ -151,9 +150,9 @@ $cakeDescription = 'Se Liga - Igarassu';
             echo $this->Form->control('lng',['id' => 'lng', "type" => "hidden"]);            
 
         ?>
+            <?= $this->Form->submit(('Registrar')) ?>
+            <?= $this->Form->end() ?>
         </fieldset>
-    <?= $this->Form->button(('Registrar')) ?>
-    <?= $this->Form->end() ?>
     </div>
 </fieldset>
     

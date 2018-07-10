@@ -2390,6 +2390,8 @@ fieldset {
 
 fieldset legend {
     background: transparent;
+    color: #037096;
+    font-size: 25px;
     font-weight: bold;
     margin-left: -0.1875rem;
     margin: 0;
