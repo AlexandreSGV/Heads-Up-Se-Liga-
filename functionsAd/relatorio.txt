@@ -37,3 +37,7 @@ Não retratado antes, porém, o composer na sua especificação do php na hora d
 "a2ensite seliga.conf"
 "systemctl reload apache2" 
 Para que assim o comportamento do apache2 adicione mais uma reação para o recebimento da aplicação do framework cakephp 
+
+10/07
+
+	Preparando aplicação para alimentação manual do prototipo1 https://github.com/BeatrizSSA/Tabela_gladiators para o prototipo2 https://github.com/brunaneves7/Heads-Up-Se-Liga-
