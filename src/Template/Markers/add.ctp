@@ -112,31 +112,44 @@ $cakeDescription = 'Se Liga - Igarassu';
 
 </head>
 <body>
-  <div class="w3-top">
-    <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
-       
-  
-        <div class="navbar a">
-            <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
-            <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
-            <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
-            <a href="../" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Home</a>
-        </div>
-        </div>
-      
-    </nav>
-  
-<div id="map"></div>
+   <div class="w3-top">
+        <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
+            <div class="navbar a">
+                <li style="list-style: none;">
+                    <?= $this->Html->link("SeLiga","/#intro")?>
+                
+                </li>
+            </div>
+        </nav>
+    </div>
+<div id="map"></div> 
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
+<div id="submit"></div>
+<div id="left" align="left">
+    <div class="inicio">
+    <?= $this->Form->create($marker) ?>
+<fieldset>
+    <input disabled="disabled" type="hidden" id="latlng" value="40.714224,-73.961452">
+        <legend><?=('Registrar Crime') ?></legend>
+    
+        <?php
+            echo $this->Form->control('name',['label' => 'Nome']);
+            echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)','disabled' => 'disabled', 'id' => 'address']);
+            echo $this->Form->control('title',['label' => 'Título']);
+            echo $this->Form->control('date',['label' => 'Dia' ,'empty' => true]);
+            echo $this->Form->control('description',['label' => 'Descrição', 'type' => 'textarea']);
+            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['Assassinato','Latrocinio','Espancamento','Feminicidio','Infanticídio','Furto','Roubo'],]);
+            echo $this->Form->control('lat', ['type'=>'hidden', 'disabled' => 'disabled']);
+            echo $this->Form->control('lng', ['type'=>'hidden', 'disabled' => 'disabled']);
+            /*echo $this->Form->control('schedule',['label' => 'Horário' , 'empty' => true]);*/
+            
 
-<div class="w3-container">
-<div id="left" align="center">
-    <a href="markers/add" style="color: white;">Registrar Crime</a>     
+        ?>
+        </fieldset>
+    <?= $this->Form->button(__('Registrar')) ?>
+    <?= $this->Form->end() ?>
+    </div>
 </div>
-</div>
-
-   
-    </body>
-
+</body>
 </html>
