@@ -42,7 +42,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
-   
+    <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->script('jquery.min.js'); ?>    
 
 
@@ -58,6 +58,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 
     <?= $this->Html->meta('icon') ?>
     <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('home.css') ?>
     <?= $this->Html->css('contact.css') ?>
     <?= $this->Html->css('w3.css') ?>
@@ -76,6 +77,10 @@ $cakeDescription = 'Se Liga - Igarassu';
             map.addListener('click', function(e) {
                 var markerLatLng = e.latLng;
                 document.getElementById("latlng").value = e.latLng.lat() + "," + e.latLng.lng();
+
+                document.getElementById("lat").value = e.latLng.lat()
+                document.getElementById("lng").value = e.latLng.lng();
+
                 geocodeLatLng(geocoder, map, infowindow);
             });
         }
@@ -114,13 +119,14 @@ $cakeDescription = 'Se Liga - Igarassu';
 <body>
    <div class="w3-top">
         <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
-              <div class="navbar a">
-            <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
-            <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
-            <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
+            <div class="navbar a">
+                <li style="list-style: none;">
+                    <?= $this->Html->link("SeLiga","/#intro")?>
+                
+                </li>
             </div>
         </nav>
-     </div>
+    </div>
 <div id="map"></div> 
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
@@ -134,19 +140,19 @@ $cakeDescription = 'Se Liga - Igarassu';
     
         <?php
             echo $this->Form->control('name',['label' => 'Nome']);
-            echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)','disabled' => 'disabled', 'id' => 'address']);
+            echo $this->Form->control('address',['label' => 'Digite o Bairro do Ocorrido (ou selecione no mapa)', 'id' => 'address']);
             echo $this->Form->control('title',['label' => 'Título']);
-            echo $this->Form->control('Date',['label' => 'Data / Hora' ,'empty' => true, 'data-format' => 'dd/MM/yyyy hh:mm:ss']);
+            echo $this->Form->control('Date',['type' => 'datetime', 'label' => 'Data / Hora' ,'empty' => true]);
             echo $this->Form->control('Description',['label' => 'Descrição', 'type' => 'textarea']);
-            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['Assassinato','Latrocinio','Espancamento','Feminicidio','Infanticídio','Furto','Roubo']]);
-            echo $this->Form->control('lat', ['type'=>'hidden', 'disabled' => 'disabled']);
-            echo $this->Form->control('lng', ['type'=>'hidden', 'disabled' => 'disabled']);            
+            echo $this->Form->control('type',['label' => 'Tipo de Ocorrência', 'type' => 'select', 'options' => ['assassinato' => 'Assassinato','Latrocinio','Espancamento','Feminicidio','Infanticídio','Furto','Roubo']]);
+            echo $this->Form->control('lat',['id'=>'lat', "type" => "hidden"]);
+            echo $this->Form->control('lng',['id' => 'lng', "type" => "hidden"]);            
 
         ?>
-</fieldset>
-    <?= $this->Form->button(__('Registrar')) ?>
-    
- </div>
+        </fieldset>
+    <?= $this->Form->button(('Registrar')) ?>
+    <?= $this->Form->end() ?>
+    </div>
 </div>
 </body>
 </html>

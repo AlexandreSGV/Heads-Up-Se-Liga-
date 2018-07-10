@@ -48,14 +48,31 @@ class MarkersTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('title')
-            ->requirePresence('title', 'create')
-            ->notEmpty('title');
+            ->scalar('name')
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
 
         $validator
             ->scalar('address')
             ->requirePresence('address', 'create')
             ->notEmpty('address');
+
+        $validator
+            ->scalar('title')
+            ->requirePresence('title', 'create')
+            ->notEmpty('title');
+
+        $validator
+            ->datetime('Date')
+            ->allowEmpty('Date');
+        
+        $validator
+            ->scalar('Description')
+            ->allowEmpty('Description');
+
+        $validator
+            ->scalar('type')
+            ->allowEmpty('type');
 
         $validator
             ->numeric('lat')
@@ -66,22 +83,6 @@ class MarkersTable extends Table
             ->numeric('lng')
             ->requirePresence('lng', 'create')
             ->notEmpty('lng');
-
-        $validator
-            ->scalar('type')
-            ->allowEmpty('type');
-
-        $validator
-            ->date('date')
-            ->allowEmpty('date');
-
-        $validator
-            ->scalar('description')
-            ->allowEmpty('description');
-
-        $validator
-            ->time('schedule')
-            ->allowEmpty('schedule');
 
         return $validator;
     }

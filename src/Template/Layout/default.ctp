@@ -26,28 +26,29 @@ $cakeDescription = 'Se Liga - Igarassu';
     </title>
     <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->script('jquery.min.js'); ?>    
 
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
-    <?= $this->Html->css('home.css') ?>
-   
-    <?= $this->Html->css('seLiga.css') ?>
-    <?= $this->Html->script('jquery.min.js'); ?>    
 </head>
 <body>
  <div class="w3-top">
     <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
-        <div class="navbar a">
-           <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
-         
+        <ul class="title-area large-3 medium-4 columns">
+            <li class="name">
+                <a href=""><h1>Se Liga</h1></a>
+            </li>
+        </ul>
+        <div class="top-bar-section">
+            <ul class="right">
+            </ul>
         </div>
-      </nav>
-    </div>
+    </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

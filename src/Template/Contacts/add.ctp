@@ -10,7 +10,7 @@
         <li><?= $this->Html->link(__('List Contacts'), ['action' => 'index']) ?></li>
     </ul>
 </nav> -->
-<?= $this->Html->css('seLiga.css') ?>
+<?= $this->Html->css('contact.css') ?>
 
 <div class="contacts form large-9 medium-8 columns content">
     <?= $this->Form->create($contact) ?>

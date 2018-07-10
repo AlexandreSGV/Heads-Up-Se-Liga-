@@ -56,7 +56,7 @@ class MarkersController extends AppController
             if ($this->Markers->save($marker)) {
                 $this->Flash->success(__('The marker has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => '../']);
             }
             $this->Flash->error(__('The marker could not be saved. Please, try again.'));
         }
