@@ -132,7 +132,7 @@ $cakeDescription = 'Se Liga - Igarassu';
 
 <div class="w3-container">
 <div id="left" align="center">
-    <button><a href="markers/add">Registrar Crime</a></button>     
+    <a href="markers/add" style="color: white;">Registrar Crime</a>     
 </div>
 </div>
 

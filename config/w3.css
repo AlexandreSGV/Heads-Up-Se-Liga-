@@ -122,7 +122,7 @@ button,select {
 }
 
 button,html [type=button],[type=reset],[type=submit] {
-		border: 2px solid;
+	border: 2px solid;
     border-radius: 20px;
    -webkit-appearance: button
 }
@@ -298,7 +298,7 @@ a {
 .w3-btn,.w3-button {
     border: none;
     display: inline-block;
-    padding: 8px 16px;
+    padding: 10px 16px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
