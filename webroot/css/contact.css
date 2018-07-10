@@ -1,9 +1,9 @@
+
 * {
     box-sizing: border-box;
 }
 
 input[type=text], select, textarea {
-    width: 100%;
     padding: 1px;
     border: 2px solid #fff;
     border-radius: 20px;
@@ -61,3 +61,4 @@ input[type=submit]:hover {
         margin-top: 0;
     }
 }
+>>>>>>> e4507bc18b2945b715354daf70c51f39be0cfc60

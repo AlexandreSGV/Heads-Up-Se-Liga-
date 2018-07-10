@@ -43,8 +43,13 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    
     <?= $this->Html->script('jquery.min.js'); ?>    
+    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('w3.css') ?>
+    <?= $this->Html->css('seLiga.css') ?>
+    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
 
 
     <?= $this->fetch('meta') ?>
@@ -56,13 +61,6 @@ $cakeDescription = 'Se Liga - Igarassu';
         <?= $cakeDescription ?>
     </title>
 
-    <?= $this->Html->meta('icon') ?>
-    <!-- <?= $this->Html->css('base.css') ?> -->
-    <!-- <?= $this->Html->css('cake.css') ?> -->
-    <?= $this->Html->css('home.css') ?>
-    <?= $this->Html->css('w3.css') ?>
-    <?= $this->Html->css('seLiga.css') ?>
-    <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
 <script type="text/javascript">
 
     
@@ -111,14 +109,12 @@ heatmap.setMap(map);
 <body>
   <div class="w3-top">
     <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
-       
-  
-        <div class="navbar a">
+          <div class="navbar a">
             <a href="../" class="link-seliga w3-bar-item w3-button" style="color: white;" >Se Liga</a>
             <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
             <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
-        </div>
-          </nav>
+           </div>
+       </nav>
       </div>
       
   

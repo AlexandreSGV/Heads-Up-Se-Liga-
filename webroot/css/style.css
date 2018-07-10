@@ -1,4 +1,4 @@
-.disabled a,
+/*.disabled a,
 a.disabled {
     pointer-events: none;
 }
@@ -523,4 +523,4 @@ div.message.hidden {
 table td {
     vertical-align: top;
     word-break: break-all;
-}
+}*/
