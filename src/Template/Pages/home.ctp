@@ -63,7 +63,7 @@ $cakeDescription = 'Se Liga - Igarassu';
     <?= $this->Html->css('seLiga.css') ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
     <?php
-$dsn = 'mysql://root:ifpe@localhost/seliga';
+$dsn = 'mysql://Heads_up:ifpe@localhost/heads_up_db';
 ConnectionManager::config('home', ['url' => $dsn]);
 $connection = ConnectionManager::get('home');
 $results = $connection->execute('SELECT * FROM markers')->fetchAll('assoc'); 
