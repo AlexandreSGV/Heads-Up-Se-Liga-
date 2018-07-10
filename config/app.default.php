@@ -190,8 +190,6 @@ return [
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
     ],
-    ],
-
     /**
      * Email delivery profiles
      *
@@ -230,7 +228,7 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'rott',
+            'username' => 'root',
             'password' => 'ifpe',
             'database' => 'bd.dump',
             'encoding' => 'utf8',
