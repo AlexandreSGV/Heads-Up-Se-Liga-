@@ -1,0 +1,13 @@
+.w3-button {
+  border: 2px solid transparent!important;
+}
+.w3-button:hover {
+  color:#008CBA;
+  line-height:inherit;
+  text-decoration:none;
+  background: transparent!important;
+  padding: 14px 16px;
+  border: 2px solid #fff!important;
+  border-radius: 20px;
+  color: white!important;
+}

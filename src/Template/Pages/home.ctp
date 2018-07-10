@@ -57,10 +57,11 @@ $cakeDescription = 'Se Liga - Igarassu';
     </title>
 
     <?= $this->Html->meta('icon') ?>
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!-- <?= $this->Html->css('base.css') ?> -->
+    <!-- <?= $this->Html->css('cake.css') ?> -->
     <?= $this->Html->css('home.css') ?>
     <?= $this->Html->css('w3.css') ?>
+    <?= $this->Html->css('seLiga.css') ?>
     <?= $this->Html->css('https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono') ?>
 <script type="text/javascript">
 
@@ -119,18 +120,18 @@ heatmap.setMap(map);
             <a href="#" class="link-sobre w3-bar-item w3-button w3-right" style="color: white;" >Sobre</a>
             <a href="../contacts/add" class="link-contato w3-bar-item w3-button w3-right" style="color: white;" >Fale Conosco</a>
         </div>
-        </div>
+          </nav>
+      </div>
       
-    </nav>
   
 <div id="map"></div>
 
 <?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCvcFAuDX9XSqe9-OPBlYMhdb7FPYWD5W8&callback=myMap&libraries=visualization'); ?>
 
 <div class="w3-container">
-<div id="left" align="center">
-   <a href="markers/add" style="color: white;">Registrar Crime</a>    
-</div>
+    <div id="left" align="center">
+        <a href="markers/add" style="color: white;">Registrar Crime</a>    
+    </div>
 </div>
 
    

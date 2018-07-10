@@ -37,10 +37,11 @@ $cakeDescription = 'Se Liga - Igarassu';
 
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+ <div class="w3-top">
+    <nav class="w3-bar top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <a href="../"><h1>Se Liga</h1></a>
+                <a href=""><h1>Se Liga</h1></a>
             </li>
         </ul>
         <div class="top-bar-section">
